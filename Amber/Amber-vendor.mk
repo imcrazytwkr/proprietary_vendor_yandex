@@ -93,12 +93,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fm_helium \
     libfm-hci \
-    libmmosal \
     vendor.qti.hardware.fm@1.0 \
-    libmmparser \
-    libFileMux \
-    libOmxMux \
-    libmmparser_lite \
     com.qualcomm.qti.ant@1.0 \
     libantradio \
     liblocationservice_jni \
