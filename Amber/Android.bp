@@ -55,60 +55,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libantradio",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/system/lib/libantradio.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libbase",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libutils",
-                "com.qualcomm.qti.ant@1.0",
-                "android.hardware.bluetooth@1.0",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/system/lib64/libantradio.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libbase",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libutils",
-                "com.qualcomm.qti.ant@1.0",
-                "android.hardware.bluetooth@1.0",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libfm-hci",
     owner: "yandex",
     strip: {
@@ -379,6 +325,39 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libantradio",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libantradio.so",
+            ],
+            shared_libs: [
+                "libnativehelper",
+                "libbase",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libutils",
+                "com.qualcomm.qti.ant@1.0",
+                "android.hardware.bluetooth@1.0",
+                "libcutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -1397,307 +1376,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib-imscmservice",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-imscmservice.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "lib-imsdpl",
-                "lib-imsqimf",
-                "lib-imsxml",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imscmservice.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "lib-imsdpl",
-                "lib-imsqimf",
-                "lib-imsxml",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsdpl",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-imsdpl.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libqmiservices",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libtime_genoff",
-                "libcrypto",
-                "libssl",
-                "libandroid_net",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imsdpl.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libqmiservices",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libtime_genoff",
-                "libcrypto",
-                "libssl",
-                "libandroid_net",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsqimf",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-imsqimf.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "lib-imsxml",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imsqimf.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "lib-imsxml",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsrcs-v2",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-imsrcs-v2.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "lib-imsqimf",
-                "lib-imsxml",
-                "lib-siputility",
-                "libqmi_cci",
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhardware_legacy",
-                "libhardware",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libqmiservices",
-                "libqti_vndfwk_detect",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.2_vendor",
-                "vendor.qti.ims.callinfo@1.0_vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imsrcs-v2.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "lib-imsqimf",
-                "lib-imsxml",
-                "lib-siputility",
-                "libqmi_cci",
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhardware_legacy",
-                "libhardware",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libqmiservices",
-                "libqti_vndfwk_detect",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.2_vendor",
-                "vendor.qti.ims.callinfo@1.0_vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsrcsbaseimpl",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-imsrcsbaseimpl.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhardware_legacy",
-                "libhardware",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqti_vndfwk_detect",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.imscmservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.2_vendor",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
-                "vendor.qti.ims.callinfo@1.0_vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imsrcsbaseimpl.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhardware_legacy",
-                "libhardware",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libqmiservices",
-                "libqmi_cci",
-                "libqti_vndfwk_detect",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.imscmservice@2.1_vendor",
-                "com.qualcomm.qti.imscmservice@2.2_vendor",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.1_vendor",
-                "vendor.qti.ims.callinfo@1.0_vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib-imsvtcore",
     owner: "yandex",
     strip: {
@@ -1744,300 +1422,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsxml",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-imsxml.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imsxml.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-rtpcommon",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-rtpcommon.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "lib-imsdpl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-rtpcommon.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "lib-imsdpl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-rtpcore",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-rtpcore.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "lib-imsdpl",
-                "lib-imsvtcore",
-                "lib-rtpcommon",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-rtpcore.so",
-            ],
-            shared_libs: [
-                "libdiag",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "lib-imsdpl",
-                "lib-imsvtcore",
-                "lib-rtpcommon",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-rtpsl",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-rtpsl.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "lib-imsdpl",
-                "lib-rtpcore",
-                "lib-rtpcommon",
-                "libqti_vndfwk_detect",
-                "libdiag",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-rtpsl.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "lib-imsdpl",
-                "lib-rtpcore",
-                "lib-rtpcommon",
-                "libqti_vndfwk_detect",
-                "libdiag",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-siputility",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-siputility.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "lib-imsxml",
-                "lib-imsqimf",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-siputility.so",
-            ],
-            shared_libs: [
-                "lib-imsdpl",
-                "lib-imsxml",
-                "lib-imsqimf",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-uceservice",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/lib-uceservice.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "lib-imsdpl",
-                "lib-imsqimf",
-                "lib-imsxml",
-                "lib-siputility",
-                "libqti_vndfwk_detect",
-                "lib-imscmservice",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-uceservice.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libutils",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "lib-imsdpl",
-                "lib-imsqimf",
-                "lib-imsxml",
-                "lib-siputility",
-                "libqti_vndfwk_detect",
-                "lib-imscmservice",
-                "com.qualcomm.qti.imscmservice@2.0_vendor",
-                "com.qualcomm.qti.uceservice@2.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -2403,55 +1787,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbccQTI.so",
             ],
             shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libbt-hidlclient",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libbt-hidlclient.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libhidlbase",
-                "libhidltransport",
-                "android.hardware.bluetooth@1.0",
-                "com.qualcomm.qti.ant@1.0_vendor",
-                "vendor.qti.hardware.fm@1.0_vendor",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libbt-hidlclient.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libhidlbase",
-                "libhidltransport",
-                "android.hardware.bluetooth@1.0",
-                "com.qualcomm.qti.ant@1.0_vendor",
-                "vendor.qti.hardware.fm@1.0_vendor",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -8143,6 +7478,375 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "lib-imscmservice",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imscmservice.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "lib-imsdpl",
+                "lib-imsqimf",
+                "lib-imsxml",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsdpl",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsdpl.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libqmiservices",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libtime_genoff",
+                "libcrypto",
+                "libssl",
+                "libandroid_net",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsqimf",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsqimf.so",
+            ],
+            shared_libs: [
+                "lib-imsdpl",
+                "lib-imsxml",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsrcs-v2",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsrcs-v2.so",
+            ],
+            shared_libs: [
+                "lib-imsdpl",
+                "lib-imsqimf",
+                "lib-imsxml",
+                "lib-siputility",
+                "libqmi_cci",
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware_legacy",
+                "libhardware",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libqmiservices",
+                "libqti_vndfwk_detect",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.2_vendor",
+                "vendor.qti.ims.callinfo@1.0_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsrcsbaseimpl",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsrcsbaseimpl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware_legacy",
+                "libhardware",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libqmiservices",
+                "libqmi_cci",
+                "libqti_vndfwk_detect",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.imscmservice@2.1_vendor",
+                "com.qualcomm.qti.imscmservice@2.2_vendor",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.1_vendor",
+                "vendor.qti.ims.callinfo@1.0_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsxml",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsxml.so",
+            ],
+            shared_libs: [
+                "lib-imsdpl",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-rtpcommon",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-rtpcommon.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "lib-imsdpl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-rtpcore",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-rtpcore.so",
+            ],
+            shared_libs: [
+                "libdiag",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "lib-imsdpl",
+                "lib-imsvtcore",
+                "lib-rtpcommon",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-rtpsl",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-rtpsl.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "lib-imsdpl",
+                "lib-rtpcore",
+                "lib-rtpcommon",
+                "libqti_vndfwk_detect",
+                "libdiag",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-siputility",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-siputility.so",
+            ],
+            shared_libs: [
+                "lib-imsdpl",
+                "lib-imsxml",
+                "lib-imsqimf",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-uceservice",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-uceservice.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "lib-imsdpl",
+                "lib-imsqimf",
+                "lib-imsxml",
+                "lib-siputility",
+                "libqti_vndfwk_detect",
+                "lib-imscmservice",
+                "com.qualcomm.qti.imscmservice@2.0_vendor",
+                "com.qualcomm.qti.uceservice@2.0_vendor",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libDRPlugin",
     owner: "yandex",
     strip: {
@@ -8300,6 +8004,37 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbt-hidlclient",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libbt-hidlclient.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libhidlbase",
+                "libhidltransport",
+                "android.hardware.bluetooth@1.0",
+                "com.qualcomm.qti.ant@1.0_vendor",
+                "vendor.qti.hardware.fm@1.0_vendor",
                 "liblog",
                 "libc++",
                 "libc",
@@ -10705,67 +10440,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib-imsvt",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/lib-imsvt.so",
-            ],
-            shared_libs: [
-                "lib-imsvideocodec",
-                "libion",
-                "lib-imsvtutils",
-                "libandroid",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.qti.imsrtpservice@2.1",
-                "vendor.qti.imsrtpservice@2.0",
-                "libdiag_system",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/lib-imsvt.so",
-            ],
-            shared_libs: [
-                "lib-imsvideocodec",
-                "libion",
-                "lib-imsvtutils",
-                "libandroid",
-                "libhwbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "vendor.qti.imsrtpservice@2.1",
-                "vendor.qti.imsrtpservice@2.0",
-                "libdiag_system",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib-imsvtextutils",
     owner: "yandex",
     strip: {
@@ -11732,6 +11406,43 @@ cc_prebuilt_library_shared {
                 "libbinder",
                 "libGLESv2",
                 "libEGL",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsvt",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/product/lib64/lib-imsvt.so",
+            ],
+            shared_libs: [
+                "lib-imsvideocodec",
+                "libion",
+                "lib-imsvtutils",
+                "libandroid",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "vendor.qti.imsrtpservice@2.1",
+                "vendor.qti.imsrtpservice@2.0",
+                "libdiag_system",
+                "libcutils",
+                "libutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",

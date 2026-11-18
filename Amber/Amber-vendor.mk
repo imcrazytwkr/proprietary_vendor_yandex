@@ -92,7 +92,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fm_helium \
-    libantradio \
     libfm-hci \
     libmmosal \
     vendor.qti.hardware.fm@1.0 \
@@ -101,6 +100,7 @@ PRODUCT_PACKAGES += \
     libOmxMux \
     libmmparser_lite \
     com.qualcomm.qti.ant@1.0 \
+    libantradio \
     liblocationservice_jni \
     libxt_native \
     vendor.qti.gnss@1.0 \
@@ -124,18 +124,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.factory@1.0-impl \
     vendor.qti.hardware.fm@1.0-impl \
     vulkan.sdm660 \
-    lib-imscmservice \
-    lib-imsdpl \
-    lib-imsqimf \
-    lib-imsrcs-v2 \
-    lib-imsrcsbaseimpl \
     lib-imsvtcore \
-    lib-imsxml \
-    lib-rtpcommon \
-    lib-rtpcore \
-    lib-rtpsl \
-    lib-siputility \
-    lib-uceservice \
     libC2D2 \
     libCB \
     libOpenCL \
@@ -145,7 +134,6 @@ PRODUCT_PACKAGES += \
     libadsp_default_listener \
     libadsprpc \
     libbccQTI \
-    libbt-hidlclient \
     libc2d30_bltlib \
     libcdsprpc \
     libcne \
@@ -286,12 +274,24 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.ant@1.0-impl \
     vendor.qti.gnss@2.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
+    lib-imscmservice \
+    lib-imsdpl \
+    lib-imsqimf \
+    lib-imsrcs-v2 \
+    lib-imsrcsbaseimpl \
+    lib-imsxml \
+    lib-rtpcommon \
+    lib-rtpcore \
+    lib-rtpsl \
+    lib-siputility \
+    lib-uceservice \
     libDRPlugin \
     libGPreqcancel \
     libGPreqcancel_svc \
     libSecureUILib \
     libStDrvInt \
     libalarmservice_jni \
+    libbt-hidlclient \
     libbtnv \
     libdataitems \
     libdisp-aba \
@@ -375,7 +375,6 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.imscmservice@2.2 \
     com.qualcomm.qti.uceservice@2.0 \
     com.qualcomm.qti.uceservice@2.1 \
-    lib-imsvt \
     lib-imsvtextutils \
     lib-imsvtutils \
     libdiag_system \
@@ -396,6 +395,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@2.1 \
     lib-imscamera \
     lib-imsvideocodec \
+    lib-imsvt \
     libaptXHD_encoder \
     libaptX_encoder \
     CneApp \
