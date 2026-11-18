@@ -10006,49 +10006,6 @@ prebuilt_rfsa {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.dpm.api@1.0",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/com.qualcomm.qti.dpm.api@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/com.qualcomm.qti.dpm.api@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.imscmservice@1.0",
     owner: "yandex",
     strip: {
@@ -10302,423 +10259,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtextutils",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/lib-imsvtextutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "lib-imsvtutils",
-                "libGLESv2",
-                "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/lib-imsvtextutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "lib-imsvtutils",
-                "libGLESv2",
-                "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "lib-imsvtutils",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/lib-imsvtutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/lib-imsvtutils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libdiag_system",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdiag_system",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libdiag_system.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libdiag_system.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmctmgr",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libdpmctmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libdpmctmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmfdmgr",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libdpmfdmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libdpmfdmgr.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmframework",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libdpmframework.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libdpmframework.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libhardware_legacy",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libdpmtcm",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libdpmtcm.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libdpmtcm.so",
-            ],
-            shared_libs: [
-                "libdiag_system",
-                "libbinder",
-                "libcutils",
-                "libutils",
-                "libdpmframework",
-                "com.qualcomm.qti.dpm.api@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimscamera_jni",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libimscamera_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libimsmedia_jni",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/product/lib/libimsmedia_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
-                "liblog",
-                "libandroid",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libimsmedia_jni.so",
-            ],
-            shared_libs: [
-                "libnativehelper",
-                "libcutils",
-                "libutils",
-                "libgui",
-                "libbinder",
-                "liblog",
-                "libandroid",
                 "libc++",
                 "libc",
                 "libm",
@@ -11053,7 +10593,51 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.imsrtpservice@2.0",
+    name: "libaptXHD_encoder",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/product/lib64/libaptXHD_encoder.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaptX_encoder",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/product/lib64/libaptX_encoder.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qualcomm.qti.dpm.api@1.0",
     owner: "yandex",
     strip: {
         none: true,
@@ -11061,7 +10645,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/product/lib/vendor.qti.imsrtpservice@2.0.so",
+                "proprietary/system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -11076,7 +10660,7 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/product/lib64/vendor.qti.imsrtpservice@2.0.so",
+                "proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -11092,7 +10676,467 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsvtextutils",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/lib-imsvtextutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libdiag_system",
+                "lib-imsvtutils",
+                "libGLESv2",
+                "libEGL",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/lib-imsvtextutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libdiag_system",
+                "lib-imsvtutils",
+                "libGLESv2",
+                "libEGL",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsvtutils",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/lib-imsvtutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libdiag_system",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/lib-imsvtutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libdiag_system",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdiag_system",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdiag_system.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdiag_system.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpmctmgr",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdpmctmgr.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "libdpmframework",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdpmctmgr.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "libdpmframework",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpmfdmgr",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdpmfdmgr.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "libdpmframework",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdpmfdmgr.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "libdpmframework",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpmframework",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdpmframework.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libhidlbase",
+                "libhardware",
+                "libhardware_legacy",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdpmframework.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libhidlbase",
+                "libhardware",
+                "libhardware_legacy",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpmtcm",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdpmtcm.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "libdpmframework",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdpmtcm.so",
+            ],
+            shared_libs: [
+                "libdiag_system",
+                "libbinder",
+                "libcutils",
+                "libutils",
+                "libdpmframework",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimscamera_jni",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libimscamera_jni.so",
+            ],
+            shared_libs: [
+                "libnativehelper",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libimscamera_jni.so",
+            ],
+            shared_libs: [
+                "libnativehelper",
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimsmedia_jni",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libimsmedia_jni.so",
+            ],
+            shared_libs: [
+                "libnativehelper",
+                "libcutils",
+                "libutils",
+                "libgui",
+                "libbinder",
+                "liblog",
+                "libandroid",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libimsmedia_jni.so",
+            ],
+            shared_libs: [
+                "libnativehelper",
+                "libcutils",
+                "libutils",
+                "libgui",
+                "libbinder",
+                "liblog",
+                "libandroid",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.imsrtpservice@2.0",
+    owner: "yandex",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/vendor.qti.imsrtpservice@2.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@2.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -11104,7 +11148,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/product/lib/vendor.qti.imsrtpservice@2.1.so",
+                "proprietary/system_ext/lib/vendor.qti.imsrtpservice@2.1.so",
             ],
             shared_libs: [
                 "vendor.qti.imsrtpservice@2.0",
@@ -11120,7 +11164,7 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: [
-                "proprietary/product/lib64/vendor.qti.imsrtpservice@2.1.so",
+                "proprietary/system_ext/lib64/vendor.qti.imsrtpservice@2.1.so",
             ],
             shared_libs: [
                 "vendor.qti.imsrtpservice@2.0",
@@ -11137,7 +11181,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "both",
     prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -11149,7 +11193,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/product/lib64/lib-imscamera.so",
+                "proprietary/system_ext/lib64/lib-imscamera.so",
             ],
             shared_libs: [
                 "libgui_shim",
@@ -11185,7 +11229,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -11197,7 +11241,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/product/lib64/lib-imsvideocodec.so",
+                "proprietary/system_ext/lib64/lib-imsvideocodec.so",
             ],
             shared_libs: [
                 "libgui_shim",
@@ -11248,7 +11292,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -11260,7 +11304,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/product/lib64/lib-imsvt.so",
+                "proprietary/system_ext/lib64/lib-imsvt.so",
             ],
             shared_libs: [
                 "lib-imsvideocodec",
@@ -11283,51 +11327,7 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaptXHD_encoder",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libaptXHD_encoder.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    product_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaptX_encoder",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/product/lib64/libaptX_encoder.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 android_app_import {
@@ -11466,15 +11466,6 @@ dex_import {
 }
 
 dex_import {
-    name: "com.qti.dpmframework",
-    owner: "yandex",
-    jars: [
-        "proprietary/product/framework/com.qti.dpmframework.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
     name: "com.qualcomm.qti.imscmservice-V2.0-java",
     owner: "yandex",
     jars: [
@@ -11502,21 +11493,30 @@ dex_import {
 }
 
 dex_import {
-    name: "dpmapi",
-    owner: "yandex",
-    jars: [
-        "proprietary/product/framework/dpmapi.jar",
-    ],
-    product_specific: true,
-}
-
-dex_import {
     name: "qcrilhook",
     owner: "yandex",
     jars: [
         "proprietary/product/framework/qcrilhook.jar",
     ],
     product_specific: true,
+}
+
+dex_import {
+    name: "com.qti.dpmframework",
+    owner: "yandex",
+    jars: [
+        "proprietary/system_ext/framework/com.qti.dpmframework.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "dpmapi",
+    owner: "yandex",
+    jars: [
+        "proprietary/system_ext/framework/dpmapi.jar",
+    ],
+    system_ext_specific: true,
 }
 
 dex_import {
@@ -13016,7 +13016,7 @@ cc_prebuilt_binary {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/product/bin/dpmd",
+                "proprietary/system_ext/bin/dpmd",
             ],
             shared_libs: [
                 "libdpmframework",
@@ -13039,7 +13039,7 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
