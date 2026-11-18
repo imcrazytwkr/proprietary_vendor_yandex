@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
     libqrtr \
     libqseed3 \
     libqsocket \
-    libqti-perfd-client \
     libqti-perfd \
     libqti-util \
     libqtikeymaster4 \
