@@ -5,6 +5,7 @@
 soong_namespace {
     imports: [
         "device/yandex/Amber",
+        "hardware/qcom-caf/common/libqti-perfd-client",
         "hardware/qcom-caf/msm8998",
         "hardware/qcom-caf/wlan",
         "vendor/qcom/opensource/dataservices",
@@ -4954,73 +4955,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.data.factory@1.0",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/vendor.qti.data.factory@1.0.so",
-            ],
-            shared_libs: [
-                "com.quicinc.cne.api@1.0",
-                "com.quicinc.cne.api@1.1",
-                "com.quicinc.cne.constants@2.1",
-                "com.quicinc.cne.server@2.0",
-                "com.quicinc.cne.server@2.1",
-                "com.quicinc.cne.server@2.2",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0_vendor",
-                "vendor.qti.latency@2.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.data.factory@1.0.so",
-            ],
-            shared_libs: [
-                "com.quicinc.cne.api@1.0",
-                "com.quicinc.cne.api@1.1",
-                "com.quicinc.cne.constants@2.1",
-                "com.quicinc.cne.server@2.0",
-                "com.quicinc.cne.server@2.1",
-                "com.quicinc.cne.server@2.2",
-                "vendor.qti.hardware.data.dynamicdds@1.0",
-                "vendor.qti.hardware.data.qmi@1.0",
-                "vendor.qti.ims.rcsconfig@1.0_vendor",
-                "vendor.qti.latency@2.0",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.data.factory@2.0",
     owner: "yandex",
     strip: {
@@ -6289,37 +6223,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libOmxVideoDSMode",
-    owner: "yandex",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libOmxVideoDSMode.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libmmosal_proprietary",
-                "libutils",
-                "libOmxCore",
-                "libwfdcommonutils_proprietary",
-                "libwfdmmservice",
-                "libbinder",
                 "libc++",
                 "libc",
                 "libm",

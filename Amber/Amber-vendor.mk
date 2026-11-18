@@ -205,7 +205,6 @@ PRODUCT_PACKAGES += \
     libwvdrmengine \
     qcrild_librilutils \
     qtimutex \
-    vendor.qti.data.factory@1.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
@@ -234,7 +233,6 @@ PRODUCT_PACKAGES += \
     libOmxAacDec \
     libOmxEvrcDec \
     libOmxQcelp13Dec \
-    libOmxVideoDSMode \
     libOmxVpp \
     libacdb-fts \
     libacdbloader \
