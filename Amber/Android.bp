@@ -119,6 +119,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib/vendor.qti.hardware.fm@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -136,6 +137,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/vendor.qti.hardware.fm@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -10794,6 +10796,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib/libdpmframework.so",
             ],
             shared_libs: [
+                "libcutils_shim",
                 "libdiag_system",
                 "libbinder",
                 "libcutils",
