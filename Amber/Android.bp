@@ -165,6 +165,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/com.qualcomm.qti.ant@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -297,6 +298,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/vendor.qti.gnss@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "android.hardware.gnss@1.0",
                 "libhidlbase",
                 "libhidltransport",
@@ -327,6 +329,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/vendor.qti.gnss@1.1.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0",
                 "libhidlbase",
@@ -358,6 +361,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/vendor.qti.gnss@1.2.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0",
                 "vendor.qti.gnss@1.1",
@@ -390,6 +394,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/vendor.qti.gnss@2.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0",
                 "vendor.qti.gnss@1.1",
@@ -423,6 +428,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system/lib64/vendor.qti.gnss@2.1.so",
             ],
             shared_libs: [
+                "libhidlbase_shim_sys",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0",
                 "vendor.qti.gnss@1.1",
@@ -586,6 +592,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -632,6 +639,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -727,6 +735,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     relative_install_path: "egl",
     prefer: true,
     soc_specific: true,
@@ -2585,6 +2594,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libllvm-glnext.so",
             ],
             shared_libs: [
+                "libgnu_strerror_shim",
                 "libgsl",
                 "libc++",
                 "libc",
@@ -2597,6 +2607,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libllvm-glnext.so",
             ],
             shared_libs: [
+                "libgnu_strerror_shim",
                 "libgsl",
                 "libc++",
                 "libc",
@@ -2622,6 +2633,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/libllvm-qcom.so",
             ],
             shared_libs: [
+                "libgnu_strerror_shim",
                 "libc++",
                 "libc",
                 "libm",
@@ -2633,6 +2645,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libllvm-qcom.so",
             ],
             shared_libs: [
+                "libgnu_strerror_shim",
                 "libc++",
                 "libc",
                 "libm",
@@ -5261,6 +5274,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/vendor.qti.hardware.factory@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -5278,6 +5292,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.factory@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -5309,6 +5324,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/vendor.qti.hardware.fm@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -5326,6 +5342,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -6910,6 +6927,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/com.qualcomm.qti.ant@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -8497,6 +8515,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libril-qc-hal-qmi.so",
             ],
             shared_libs: [
+                "libgnu_strerror_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -8897,6 +8916,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.display.color@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -8927,6 +8947,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.display.postproc@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -8958,6 +8979,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.gnss@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "android.hardware.gnss@1.0",
                 "libhidlbase",
                 "libhidltransport",
@@ -8990,6 +9012,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.gnss@1.1.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0_vendor",
                 "libhidlbase",
@@ -9023,6 +9046,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.gnss@1.2.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0_vendor",
                 "vendor.qti.gnss@1.1_vendor",
@@ -9057,6 +9081,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.gnss@2.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "android.hardware.gnss@1.0",
                 "vendor.qti.gnss@1.0_vendor",
                 "vendor.qti.gnss@1.1_vendor",
@@ -9695,6 +9720,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase_shim",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -16963,6 +16989,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -17486,6 +17513,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -17510,6 +17538,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
